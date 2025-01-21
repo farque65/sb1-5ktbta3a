@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ArrowLeft } from 'lucide-react';
 import { flashCards } from '../data/frenchData';
 
 const Flashcards = () => {
@@ -11,6 +11,11 @@ const Flashcards = () => {
     setIsFlipped(false);
   };
 
+  const previousCard = () => {
+    setCurrentCard((prev) => (prev - 1 + flashCards.length) % flashCards.length);
+    setIsFlipped(false);
+  };
+  
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-500 to-blue-600 py-8">
       <div className="container mx-auto px-4">
@@ -35,6 +40,13 @@ const Flashcards = () => {
           </div>
         
           <div className="mt-8 flex justify-center">
+            <button
+              onClick={previousCard}
+              className="flex items-center space-x-2 bg-white text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors"
+            >
+              <span>Back</span>
+              <ArrowRight className="w-5 h-5" />
+            </button>
             <button
               onClick={nextCard}
               className="flex items-center space-x-2 bg-white text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors"
