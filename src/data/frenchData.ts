@@ -145,17 +145,6 @@ export const quizQuestions = [
     options: ["Good morning", "Very well", "Good night", "See you later"],
     correctAnswer: "Very well"
   },
-  {
-  "question_number": 2,
-  "quiz_name": "Compréhension de l’écrit 1",
-  "question": "Quel est le but du texte?",
-  "options": [
-      "Informer au sujet d’une causerie relative à la santé et à la sécurité au travail et des façons d’y participer.",
-      "Annoncer aux employés qu’on les attend à la présentation d’un ergothérapeute.",
-       "Annoncer aux employés que la séance se fera par Internet et qu’ils pourront poser des questions."
-  ],
-  "correctAnswer": "Informer au sujet d’une causerie relative à la santé et à la sécurité au travail et des façons d’y participer."
-},
  {
   "question_number": 3,
   "quiz_name": "Compréhension de l’écrit 1",
@@ -167,17 +156,6 @@ export const quizQuestions = [
       "dans"
   ],
   "correctAnswer": "à"
-},
-{
-  "question_number": 4,
-  "quiz_name": "Compréhension de l’écrit 1",
-  "question": "Quel est le but du texte?",
-    "options": [
-     "Informer au sujet d’une causerie relative à la santé et à la sécurité au travail et des façons d’y participer.",
-     "Annoncer aux employés qu’on les attend à la présentation d’un ergothérapeute.",
-      "Annoncer aux employés que la séance se fera par Internet et qu’ils pourront poser des questions."
-  ],
-  "correctAnswer": "Annoncer aux employés qu’on les attend à la présentation d’un ergothérapeute."
 },
  {
   "question_number": 6,
@@ -191,18 +169,6 @@ export const quizQuestions = [
   ],
   "correctAnswer": "remplir"
 },
- {
-  "question_number": 8,
-  "quiz_name": "Compréhension de l’écrit 1",
-  "question": "Quel est le but du texte?",
-  "options": [
-      "Informer les citoyens qu’ils doivent faire leur déclaration de revenus par voie électronique.",
-      "Indiquer aux citoyens les étapes à suivre pour produire leur déclaration de revenus par voie électronique.",
-      "Faire la promotion d’IMPÔTNET et de TED auprès des citoyens.",
-      "Informer les citoyens sur les étapes à suivre pour faire leur déclaration de revenus par voie électronique."
-   ],
-    "correctAnswer": "Faire la promotion d’IMPÔTNET et de TED auprès des citoyens."
-  },
  {
   "question_number": 10,
   "quiz_name": "Compréhension de l’écrit 1",
@@ -579,18 +545,6 @@ export const quizQuestions = [
    "les séminaires sont en français seulement."
     ],
   "correctAnswer":"les sessions sont offertes durant les heures de travail."
-},
-{
-"question_number": 4,
-"quiz_name":"Compréhension de l’écrit 6",
-"question": "Quel est le but du texte?",
-  "options":[
-  "Trouver des experts en ressources humaines pour donner les séminaires sur le Web.",
-    "Annoncer aux ressources humaines que des experts vont donner des séminaires.",
-    "Parler des sujets qui seront développés par les experts en ressources humaines.",
-     "Informer les employés d’une série de webinaires offerts sur le Web et les inviter à y participer."
-    ],
- "correctAnswer":"Informer les employés d’une série de webinaires offerts sur le Web et les inviter à y participer."
 },
 {
 "question_number": 5,
