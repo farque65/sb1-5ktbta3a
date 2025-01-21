@@ -42,10 +42,10 @@ const Flashcards = () => {
           <div className="mt-8 flex justify-center">
             <button
               onClick={previousCard}
-              className="flex items-center space-x-2 bg-white text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors"
+              className="mr-2 flex items-center space-x-2 bg-white text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors"
             >
               <span>Back</span>
-              <ArrowRight className="w-5 h-5" />
+              <ArrowLeft className="w-5 h-5" />
             </button>
             <button
               onClick={nextCard}
