@@ -543,6 +543,99 @@ export const quizQuestions = [
     "sa demande doit être analysée avant qu’il puisse remplir les formulaires nécessaires."
   ],
 "correctAnswer": "sa demande doit être analysée avant qu’il puisse remplir les formulaires nécessaires."
+},
+{
+ "question_number": 1,
+ "quiz_name":"Compréhension de l’écrit 6",
+ "question":"Choisissez le mot le plus approprié à insérer dans l’espace en blanc « C ».",
+ "options":[
+   "avantage",
+   "risque",
+  "inconvenance",
+    "inconvénient"
+    ],
+ "correctAnswer": "inconvénient"
+},
+{
+ "question_number": 2,
+ "quiz_name":"Compréhension de l’écrit 6",
+ "question": "Choisissez le mot le plus approprié à insérer dans l’espace en blanc.",
+  "options":[
+   "attaché",
+  "posté",
+    "affiché",
+   "produit"
+ ],
+"correctAnswer": "affiché"
+},
+{
+"question_number": 3,
+"quiz_name":"Compréhension de l’écrit 6",
+"question":"D’après le texte ci-dessus :",
+  "options":[
+    "les employés doivent aider à préparer une des sessions.",
+   "les sessions sont offertes durant les heures de travail.",
+   "chacune des sessions dure plus d’une heure.",
+   "les séminaires sont en français seulement."
+    ],
+  "correctAnswer":"les sessions sont offertes durant les heures de travail."
+},
+{
+"question_number": 4,
+"quiz_name":"Compréhension de l’écrit 6",
+"question": "Quel est le but du texte?",
+  "options":[
+  "Trouver des experts en ressources humaines pour donner les séminaires sur le Web.",
+    "Annoncer aux ressources humaines que des experts vont donner des séminaires.",
+    "Parler des sujets qui seront développés par les experts en ressources humaines.",
+     "Informer les employés d’une série de webinaires offerts sur le Web et les inviter à y participer."
+    ],
+ "correctAnswer":"Informer les employés d’une série de webinaires offerts sur le Web et les inviter à y participer."
+},
+{
+"question_number": 5,
+"quiz_name":"Compréhension de l’écrit 6",
+"question": "Parmi les 4 énoncés, lequel est vrai?",
+  "options":[
+  "Le principal sujet de la dernière réunion était les nouvelles technologies.",
+    "On doit utiliser les médias sociaux le jour de la réunion.",
+    "Katrina propose de parler des médias sociaux pendant la réunion.",
+     "On a des inquiétudes au sujet des nouvelles technologies."
+ ],
+ "correctAnswer":"Katrina propose de parler des médias sociaux pendant la réunion."
+},
+{
+"question_number": 6,
+"quiz_name":"Compréhension de l’écrit 6",
+"question": "Selon le texte ci-dessus, Katrina :",
+  "options":[
+     "a eu une réunion avec l’équipe du service informatique, il y a deux jours."
+    ],
+  "correctAnswer":"a eu une réunion avec l’équipe du service informatique, il y a deux jours."
+},
+{
+"question_number": 7,
+"quiz_name":"Compréhension de l’écrit 6",
+"question":"Parmi les 4 énoncés, lequel est vrai?",
+  "options":[
+    "Chaque employé doit avoir une copie de son entente de rendement.",
+    "Chaque employé doit avoir une copie de son plan de formation.",
+   "Chaque employé doit avoir une copie de son plan d’apprentissage.",
+  "Chaque employé doit avoir une copie de son plan d’apprentissage."
+  ],
+ "correctAnswer":"Chaque employé doit avoir une copie de son plan d’apprentissage."
+},
+{
+"question_number": 8,
+"quiz_name":"Compréhension de l’écrit 6",
+"question":"Parmi les 4 énoncés, lequel est vrai?",
+ "options":[
+  "Cynthia ne reçoit les questions que par courriel.",
+   "On peut poser des questions à Cynthia en personne ou par écrit.",
+    "Cynthia demande à tous les employés de passer la voir.",
+    "On doit rencontrer Cynthia ou lui envoyer un courriel pour avoir ses questions."
+   ],
+  "correctAnswer":"On peut poser des questions à Cynthia en personne ou par écrit."
 }
   
 ];
