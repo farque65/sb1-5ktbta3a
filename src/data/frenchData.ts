@@ -590,6 +590,135 @@ export const quizQuestions = [
     "On doit rencontrer Cynthia ou lui envoyer un courriel pour avoir ses questions."
    ],
   "correctAnswer":"On peut poser des questions à Cynthia en personne ou par écrit."
+},
+ {
+"question_number": 1,
+"quiz_name": "Compréhension de l’écrit 4",
+"question":"Choisissez l’expression la plus appropriée à insérer dans l’espace en blanc « A ».",
+  "options":[
+   "aura lieu",
+    "se déroulera",
+  "a eu lieu",
+   "a été attendue"
+  ],
+"correctAnswer":"a eu lieu"
+},
+{
+"question_number": 2,
+"quiz_name": "Compréhension de l’écrit 4",
+"question":"Choisissez l’expression la plus appropriée à insérer dans l’espace en blanc « B ».",
+ "options":[
+    "avons discuté",
+    "aurons parlé",
+   "avons adressé",
+  "avons observé"
+   ],
+"correctAnswer":"avons discuté"
+},
+{
+"question_number": 3,
+"quiz_name": "Compréhension de l’écrit 4",
+"question":"Parmi les 4 énoncés, lequel est vrai?",
+ "options":[
+  "Le rapport contient les éléments examinés au cours de la réunion.",
+    "Il est possible d’ajouter des commentaires au rapport.",
+    "Pour avoir une copie du rapport, il faut en faire la demande.",
+   "On pourra bientôt télécharger le rapport sur la table ronde."
+ ],
+"correctAnswer":"Le rapport contient les éléments examinés au cours de la réunion."
+},
+{
+ "question_number": 4,
+ "quiz_name": "Compréhension de l’écrit 4",
+ "question":"Parmi les 4 énoncés, lequel est vrai?",
+  "options":[
+   "Les informations fournies dans la lettre de présentation doivent être longuement détaillées.",
+    "Le contenu de la lettre de présentation devrait changer d’une demande d’emploi à l’autre.",
+   "L’employeur et l’agent des ressources humaines devraient recevoir chacun une copie de la lettre de présentation."
+ ],
+ "correctAnswer":"Le contenu de la lettre de présentation devrait changer d’une demande d’emploi à l’autre."
+},
+{
+"question_number": 5,
+"quiz_name": "Compréhension de l’écrit 4",
+"question":"Quelle expression pourrait remplacer l’expression soulignée dans le texte?",
+  "options":[
+   "En attendant",
+   "Entre-temps",
+   "Antérieurement",
+   "Actuellement"
+  ],
+"correctAnswer":"Entre-temps"
+},
+{
+"question_number": 6,
+"quiz_name": "Compréhension de l’écrit 4",
+"question":"Dans son courriel, Josh Miller :",
+  "options":[
+    "souligne le parcours professionnel de Mariana en même temps qu’il remercie Françoise pour son excellent travail.",
+    "démontre que Mariana a toutes les compétences pour occuper ce nouveau poste et annonce le départ de Françoise.",
+    "mentionne que Mariana a obtenu ce nouveau poste grâce à son dynamisme qui aidera l’organisation à fournir de meilleurs services.",
+    "annonce l’arrivée de Mariana et précise également que Françoise passera ses derniers mois à orienter et conseiller la Direction."
+  ],
+  "correctAnswer":"annonce l’arrivée de Mariana et précise également que Françoise passera ses derniers mois à orienter et conseiller la Direction."
+},
+{
+"question_number": 7,
+"quiz_name": "Compréhension de l’écrit 4",
+"question": "Quel mot ou quelle expression pourrait remplacer l’expression soulignée dans le texte?",
+  "options":[
+    "Comme",
+   "De même que",
+    "Ainsi",
+   "De cette façon"
+ ],
+"correctAnswer": "Ainsi"
+},
+{
+"question_number": 8,
+"quiz_name": "Compréhension de l’écrit 4",
+"question":"Parmi les 4 énoncés suivants, lequel est vrai?",
+  "options":[
+  "Les suggestions doivent être formulées à l’aide d’un questionnaire et remises le plus vite possible.",
+    "On demande aux employés de ne pas retourner le questionnaire avant la fin de la semaine.",
+  "Lorsque Moissa recevra les questionnaires, elle mettra à jour la liste des suggestions des employés.",
+   "Il faut enregistrer le questionnaire avant et après l’avoir rempli et ensuite en faire une copie papier pour Moissa."
+ ],
+ "correctAnswer":"Les suggestions doivent être formulées à l’aide d’un questionnaire et remises le plus vite possible."
+},
+{
+"question_number": 9,
+"quiz_name": "Compréhension de l’écrit 4",
+"question":"Quel mot pourrait remplacer le mot souligné dans le texte?",
+"options":[
+    "consultons",
+    "fréquentons",
+   "contactons",
+  "aidons"
+],
+"correctAnswer":"contactons"
+},
+{
+"question_number": 10,
+"quiz_name": "Compréhension de l’écrit 4",
+ "question":"Parmi les quatre énoncés, lequel est vrai?",
+ "options":[
+   "Luka veut un code de conduite qui traduit bien ce qu’auront exprimé les employés lors des consultations sur les valeurs et éthique.",
+   "Luka demande que les employés expriment leur opinon sur les préjudices causés par les plateformes de discussion.",
+   "Les employés disposeront d’un certain délai pour consulter le Code des valeurs et éthiques du secteur public.",
+    "Luka voudrait lancer des discussions sur les valeurs et éthique après l’adoption du nouveau code de conduite du Ministère."
+  ],
+ "correctAnswer":"Luka veut un code de conduite qui traduit bien ce qu’auront exprimé les employés lors des consultations sur les valeurs et éthique."
+},
+{
+ "question_number": 11,
+ "quiz_name": "Compréhension de l’écrit 4",
+ "question":"Quelle phrase résume le mieux le texte?",
+  "options":[
+    "Luka, qui vient d’être nommé champion en valeurs et éthique, donnera sous peu, plus d’information sur la participation prochaine des employés à la création du code.",
+   "Les employés apprennent que Lucas est désormais leur champion en matière de valeurs et éthiques."
+ ],
+"correctAnswer":"Luka, qui vient d’être nommé champion en valeurs et éthique, donnera sous peu, plus d’information sur la participation prochaine des employés à la création du code."
 }
   
 ];
