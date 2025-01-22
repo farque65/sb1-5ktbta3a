@@ -1,13 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { Brain, GraduationCap } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { motivationalPhrases } from '../utils/motivationalPhrases';
 import { getStreak } from '../utils/streak';
 
 const Dashboard = () => {
   const [streak, setStreak] = useState(0);
+  const [motivationalPhrase, setMotivationalPhrase] = useState('');
 
   useEffect(() => {
     setStreak(getStreak());
+    setMotivationalPhrase(motivationalPhrases[Math.floor(Math.random() * motivationalPhrases.length)]);
   }, []);
 
   return (
@@ -48,9 +51,9 @@ const Dashboard = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <div className="bg-blue-400 rounded-lg p-6 inline-block">
+          <div className="bg-blue-400 rounded-lg p-6 inline-block max-w-2xl">
             <h3 className="text-xl font-semibold mb-2">Daily Streak: {streak} 🔥</h3>
-            <p>Keep learning to maintain your streak!</p>
+            <p className="text-lg mt-4 italic">{motivationalPhrase}</p>
           </div>
         </div>
       </div>

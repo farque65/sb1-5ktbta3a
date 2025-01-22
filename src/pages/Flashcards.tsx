@@ -1,6 +1,7 @@
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 import React, { useState } from 'react';
-import { ArrowRight, ArrowLeft } from 'lucide-react';
 import { flashCards } from '../data/frenchData';
+import { showMotivationalNotification } from '../utils/notification';
 
 const Flashcards = () => {
   const [currentCard, setCurrentCard] = useState(0);
@@ -9,13 +10,14 @@ const Flashcards = () => {
   const nextCard = () => {
     setCurrentCard((prev) => (prev + 1) % flashCards.length);
     setIsFlipped(false);
+    showMotivationalNotification('card');
   };
 
   const previousCard = () => {
     setCurrentCard((prev) => (prev - 1 + flashCards.length) % flashCards.length);
     setIsFlipped(false);
   };
-  
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-500 to-blue-600 py-8">
       <div className="container mx-auto px-4">

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { quizQuestions } from '../data/frenchData';
+import { showMotivationalNotification } from '../utils/notification';
 
 const Quiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -18,6 +19,7 @@ const Quiz = () => {
       setSelectedAnswer(null);
       if (currentQuestion < quizQuestions.length - 1) {
         setCurrentQuestion(currentQuestion + 1);
+        showMotivationalNotification('quiz');
       } else {
         setShowScore(true);
       }
