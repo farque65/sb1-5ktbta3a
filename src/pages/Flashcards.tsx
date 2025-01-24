@@ -1,11 +1,26 @@
 import { ArrowLeft, ArrowRight } from 'lucide-react';
-import React, { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { flashCards } from '../data/frenchData';
 import { showMotivationalNotification } from '../utils/notification';
 
 const Flashcards = () => {
   const [currentCard, setCurrentCard] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
+  const [shuffledCards, setShuffledCards] = useState(flashCards);
+
+  useEffect(() => {
+    // Fisher-Yates shuffle algorithm
+    const shuffleCards = () => {
+      const cards = [...flashCards];
+      for (let i = cards.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [cards[i], cards[j]] = [cards[j], cards[i]];
+      }
+      setShuffledCards(cards);
+    };
+
+    shuffleCards();
+  }, []);
 
   const nextCard = () => {
     setCurrentCard((prev) => (prev + 1) % flashCards.length);
@@ -33,7 +48,7 @@ const Flashcards = () => {
                 Card {currentCard + 1} of {flashCards.length}
               </p>
               <p className="text-3xl font-bold mb-4 text-gray-800">
-                {isFlipped ? flashCards[currentCard].english : flashCards[currentCard].french}
+                {isFlipped ? shuffledCards[currentCard].english : shuffledCards[currentCard].french}
               </p>
               <p className="text-gray-500 text-sm">
                 {isFlipped ? 'Click to see French' : 'Click to see English'}
