@@ -16,11 +16,15 @@ export const flashCards = [
 		english: 'Language Training Centre',
 	},
 	{
+		french: 'logiciel',
+		english: 'Software',
+	},
+	{
 		french: "Direction de l'élaboration et des technologies d'apprentissage",
 		english: 'Learning Design and Technology Directorate',
 	},
 	{
-		french: 'Direction du projet',
+		french: 'Gestion du projet',
 		english: 'Project Management',
 	},
 	{
@@ -36,20 +40,12 @@ export const flashCards = [
 		english: 'Audio/video production',
 	},
 	{
-		french: 'Conception Web et expertise-conseil',
-		english: 'Web design and consulting services',
-	},
-	{
 		french: "Service d'infolangagerie",
 		english: 'Infolangage Service',
 	},
 	{
 		french: 'Bureau de la traduction',
 		english: 'Translation Bureau',
-	},
-	{
-		french: "Je m'appelle...",
-		english: 'My name is...',
 	},
 	{
 		french: 'Je demeure à...',
@@ -392,100 +388,12 @@ export const flashCards = [
 		english: 'observed',
 	},
 	{
-		french: 'publie',
-		english: 'publishes',
-	},
-	{
-		french: 'annonce',
-		english: 'announces',
-	},
-	{
 		french: 'cache',
 		english: 'hides',
 	},
 	{
 		french: 'montre',
 		english: 'shows',
-	},
-	{
-		french: 'reporter',
-		english: 'postpone',
-	},
-	{
-		french: 'poster',
-		english: 'post',
-	},
-	{
-		french: 'connecter',
-		english: 'connect',
-	},
-	{
-		french: 'référer',
-		english: 'refer',
-	},
-	{
-		french: 'réellement',
-		english: 'really',
-	},
-	{
-		french: 'ultimes',
-		english: 'ultimate',
-	},
-	{
-		french: 'possibles',
-		english: 'possible',
-	},
-	{
-		french: 'épineuses',
-		english: 'thorny',
-	},
-	{
-		french: 'incontournables',
-		english: 'unavoidable',
-	},
-	{
-		french: 'résisteront',
-		english: 'will resist',
-	},
-	{
-		french: 'seront le sujet',
-		english: 'will be the subject',
-	},
-	{
-		french: 'feront l’objet',
-		english: 'will be the object',
-	},
-	{
-		french: 'se transmettront',
-		english: 'will be transmitted',
-	},
-	{
-		french: 'avantage',
-		english: 'advantage',
-	},
-	{
-		french: 'risque',
-		english: 'risk',
-	},
-	{
-		french: 'inconvenance',
-		english: 'inconvenience',
-	},
-	{
-		french: 'inconvénient',
-		english: 'disadvantage',
-	},
-	{
-		french: 'attaché',
-		english: 'attached',
-	},
-	{
-		french: 'posté',
-		english: 'posted',
-	},
-	{
-		french: 'affiché',
-		english: 'displayed',
 	},
 	{
 		french: 'produit',
@@ -660,22 +568,6 @@ export const flashCards = [
 		english: 'to',
 	},
 	{
-		french: 'de',
-		english: 'of',
-	},
-	{
-		french: 'par',
-		english: 'by',
-	},
-	{
-		french: 'pour',
-		english: 'for',
-	},
-	{
-		french: 'Pour',
-		english: 'for',
-	},
-	{
 		french: 'Pour autant',
 		english: 'For all that',
 	},
@@ -788,10 +680,6 @@ export const flashCards = [
 		english: 'data',
 	},
 	{
-		french: 'leur situation',
-		english: 'their situation',
-	},
-	{
 		french: 'a obligé',
 		english: 'has obliged',
 	},
@@ -856,8 +744,8 @@ export const flashCards = [
 		english: 'incurred',
 	},
 	{
-		french: 'atteinte',
-		english: 'invasion',
+		french: 'Atteinte',
+		english: 'Attainment / Achievement',
 	},
 	{
 		french: 'pour autant que je sache',
@@ -1464,6 +1352,90 @@ export const flashCards = [
 		french: 'ci-joint',
 		english: 'attached',
 	},
+
+	{ french: "je l'ai demandé", english: 'I asked for it' },
+	{ french: "j'ai lui demandé", english: 'I asked him/her' },
+	{ french: 'branche', english: 'branch' },
+	{ french: 'branchement', english: 'connection, wiring' },
+	{ french: 'une connexion', english: 'a connection' },
+	{ french: 'répandue', english: 'widespread, common' },
+	{ french: 'trainee', english: 'trainee' },
+	{
+		french: 'une traînée de poudre partout',
+		english: 'a trail of powder everywhere',
+	},
+	{ french: 'échéance', english: 'deadline, due date' },
+	{ french: 'note de frais', english: 'expense report' },
+	{ french: 'régler', english: 'to settle, to adjust, to pay' },
+	{ french: 'entraîner', english: 'to lead to, to cause, to train' },
+	{ french: 'augmentation des dépenses', english: 'increase in expenses' },
+	{ french: 'ordre du jour', english: 'agenda' },
+	{ french: 'mise en demeure', english: 'formal notice, demand letter' },
+	{ french: 'accuser', english: 'to accuse, to acknowledge' },
+	{ french: 'charger', english: 'to charge, to load' },
+	{ french: 'craindre', english: 'to fear' },
+	{ french: 'tenu compte', english: 'taken into account' },
+	{ french: 'dérivants', english: 'derivatives' },
+	{ french: 'la peine', english: 'pain, punishment, effort' },
+	{ french: "la peine d'embaucher", english: 'the trouble of hiring' },
+	{ french: 'coupures de postes', english: 'job cuts' },
+	{ french: 'revenir', english: 'to come back' },
+	{ french: 'retourner', english: 'to return (somewhere)' },
+	{ french: 'vaille', english: 'may be worth' },
+	{ french: 'compressions de personnel', english: 'staff reductions' },
+	{ french: 'étant', english: 'being' },
+	{ french: 'intervenants', english: 'speakers, stakeholders' },
+	{ french: "main-d'œuvre", english: 'workforce, labor' },
+	{ french: 'pénurie', english: 'shortage' },
+	{ french: 'au cours', english: 'during, over the course of' },
+	{ french: 'précipité', english: 'hurried, precipitate' },
+	{ french: "de l'outil en ligne", english: 'of the online tool' },
+	{
+		french: 'circonstances exceptionnelles',
+		english: 'exceptional circumstances',
+	},
+	{ french: 'prévaloir', english: 'to prevail' },
+	{ french: 'bénéficier', english: 'to benefit' },
+	{ french: 'titulaire', english: 'holder, incumbent' },
+	{ french: 'andragogie', english: 'adult education' },
+	{ french: 'mettre sur pied', english: 'to set up' },
+	{ french: 'degré', english: 'degree, level' },
+	{ french: 'auront eus', english: 'will have had' },
+	{ french: 'fabricants', english: 'manufacturers' },
+	{ french: 'prévu', english: 'planned, expected' },
+	{ french: 'promouvoir', english: 'to promote' },
+	{ french: 'mis à jour', english: 'updated' },
+	{
+		french: 'si vous avez des questions à ce sujet',
+		english: 'if you have any questions on this matter',
+	},
+	{ french: 'valoir', english: 'to be worth' },
+	{ french: 'veiller', english: 'to ensure, to watch over' },
+	{ french: 'atteinte', english: 'violation, harm, achievement' },
+	{
+		french: 'à ma connaissance / que je sache',
+		english: 'to my knowledge / as far as I know',
+	},
+	{ french: 'pour que je sache', english: 'so that I know' },
+	{ french: 'aussi loin que je sache', english: 'as far as I know' },
+	{ french: 'étouffer', english: 'to suffocate, to suppress' },
+	{ french: 'enrayer', english: 'to stop, to halt' },
+	{ french: 'rayer', english: 'to scratch, to strike out' },
+	{ french: 'nier', english: 'to deny' },
+	{ french: 'dont', english: 'whose, including, of which' },
+	{ french: 'rodage', english: 'break-in period, fine-tuning' },
+	{ french: 'bogues', english: 'bugs, glitches' },
+	{ french: 'monde des affaires', english: 'business world' },
+	{ french: 'conférer', english: 'to confer, to grant' },
+	{ french: 'en conseil', english: 'in council, in session' },
+	{ french: 'sous peu', english: 'shortly, soon' },
+	{ french: 'les organismes partenaires', english: 'partner organizations' },
+	{ french: 'conquérir', english: 'to conquer, to win over' },
+	{ french: "d'objets de valeur", english: 'valuable objects' },
+	{ french: 'je vous saurais gré', english: 'I would be grateful' },
+	{ french: 'vigueur', english: 'vigor, strength, enforcement' },
+	{ french: 'fonctionnaires', english: 'civil servants, government employees' },
+	{ french: 'sont admissibles', english: 'are eligible' },
 ];
 
 export const quizQuestions = [
@@ -1482,54 +1454,83 @@ export const quizQuestions = [
 		options: ['Good morning', 'Very well', 'Good night', 'See you later'],
 		correctAnswer: 'Very well',
 	},
-  {
-    question: "La nouvelle politique ______________ le 15 juin.",
-    options: ["deviendra effective", "entrera en vigueur", "viendra en force", "prendra en effet"],
-    answer: "entrera en vigueur"
-  },
-  {
-    question: "Je vous ______________ mon ancien patron, Robert Lebel.",
-    options: ["introduis", "présentez", "présente", "introduisez"],
-    answer: "présente"
-  },
-  {
-    question: "Son collègue lui _______________ communiqué la nouvelle?",
-    options: ["a-t-il", "a t’il", "a t-il", "a-t il"],
-    answer: "a-t-il"
-  },
-  {
-    question: "Le directeur rencontrera la ministre _______________.",
-    options: ["le vendredi prochain", "au vendredi prochain", "prochain vendredi", "vendredi prochain"],
-    answer: "vendredi prochain"
-  },
-  {
-    question: "Tous les employés et employées doivent ______________ à la réunion.",
-    options: ["attendre", "assister", "entendre", "écouter"],
-    answer: "assister"
-  },
-  {
-    question: "Vous devriez obtenir votre laissez-passer ________________ deux semaines.",
-    options: ["d’ici", "d’ici dans", "avant dans", "par"],
-    answer: "d’ici"
-  },
-  {
-    question: "Ici au premier étage, on gèle. Gisèle trouve qu’________________ au troisième.",
-    options: ["il est moins froid", "elle est moins froide", "il fait moins froid", "elle fait moins froide"],
-    answer: "il fait moins froid"
-  },
-  {
-    question: "Sont-ils tous satisfaits ________________?",
-    options: ["de leur travail", "avec leur travail", "pour leur travail", "sur leur travail"],
-    answer: "de leur travail"
-  },
-  {
-    question: "En ce moment, nous ________________ les conséquences d’une telle décision.",
-    options: ["évaluions", "évalueons", "évalons", "évaluons"],
-    answer: "évaluons"
-  },
-  {
-    question: "Le directeur ___________________ de notre avis.",
-    options: ["n'a pas tenu compte", "n'a tenu pas compte", "a pas tenu compte", "n'a tenu compte pas"],
-    answer: "n'a pas tenu compte"
-  }
+	{
+		question: 'La nouvelle politique ______________ le 15 juin.',
+		options: [
+			'deviendra effective',
+			'entrera en vigueur',
+			'viendra en force',
+			'prendra en effet',
+		],
+		answer: 'entrera en vigueur',
+	},
+	{
+		question: 'Je vous ______________ mon ancien patron, Robert Lebel.',
+		options: ['introduis', 'présentez', 'présente', 'introduisez'],
+		answer: 'présente',
+	},
+	{
+		question: 'Son collègue lui _______________ communiqué la nouvelle?',
+		options: ['a-t-il', 'a t’il', 'a t-il', 'a-t il'],
+		answer: 'a-t-il',
+	},
+	{
+		question: 'Le directeur rencontrera la ministre _______________.',
+		options: [
+			'le vendredi prochain',
+			'au vendredi prochain',
+			'prochain vendredi',
+			'vendredi prochain',
+		],
+		answer: 'vendredi prochain',
+	},
+	{
+		question:
+			'Tous les employés et employées doivent ______________ à la réunion.',
+		options: ['attendre', 'assister', 'entendre', 'écouter'],
+		answer: 'assister',
+	},
+	{
+		question:
+			'Vous devriez obtenir votre laissez-passer ________________ deux semaines.',
+		options: ['d’ici', 'd’ici dans', 'avant dans', 'par'],
+		answer: 'd’ici',
+	},
+	{
+		question:
+			'Ici au premier étage, on gèle. Gisèle trouve qu’________________ au troisième.',
+		options: [
+			'il est moins froid',
+			'elle est moins froide',
+			'il fait moins froid',
+			'elle fait moins froide',
+		],
+		answer: 'il fait moins froid',
+	},
+	{
+		question: 'Sont-ils tous satisfaits ________________?',
+		options: [
+			'de leur travail',
+			'avec leur travail',
+			'pour leur travail',
+			'sur leur travail',
+		],
+		answer: 'de leur travail',
+	},
+	{
+		question:
+			'En ce moment, nous ________________ les conséquences d’une telle décision.',
+		options: ['évaluions', 'évalueons', 'évalons', 'évaluons'],
+		answer: 'évaluons',
+	},
+	{
+		question: 'Le directeur ___________________ de notre avis.',
+		options: [
+			"n'a pas tenu compte",
+			"n'a tenu pas compte",
+			'a pas tenu compte',
+			"n'a tenu compte pas",
+		],
+		answer: "n'a pas tenu compte",
+	},
 ];
