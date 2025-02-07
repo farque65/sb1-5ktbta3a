@@ -20,6 +20,18 @@ export const flashCards = [
 		english: 'Software',
 	},
 	{
+		french: 'prendre',
+		english: 'to take',
+	},
+	{
+		french: 'pouvoir',
+		english: 'to be able to',
+	},
+	{
+		french: 'devoir',
+		english: 'to have to',
+	},
+	{
 		french: "Direction de l'élaboration et des technologies d'apprentissage",
 		english: 'Learning Design and Technology Directorate',
 	},
