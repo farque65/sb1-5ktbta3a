@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { quizQuestions } from '../data/frenchData';
 import { showMotivationalNotification } from '../utils/notification';
 
@@ -82,7 +82,9 @@ const Quiz = () => {
                       ? option === quizQuestions[currentQuestion].correctAnswer
                         ? 'bg-green-100 border-green-500'
                         : 'bg-red-100 border-red-500'
-                      : 'bg-gray-50 hover:bg-gray-100'
+                      : selectedAnswer != null && selectedAnswer != option && option === quizQuestions[currentQuestion].correctAnswer
+                        ? 'bg-green-100 border-green-500'
+                        : 'bg-gray-50 hover:bg-gray-100'
                   } border ${
                     selectedAnswer === option ? 'border-2' : 'border'
                   }`}

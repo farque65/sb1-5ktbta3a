@@ -1474,17 +1474,17 @@ export const quizQuestions = [
 			'viendra en force',
 			'prendra en effet',
 		],
-		answer: 'entrera en vigueur',
+		correctAnswer: 'entrera en vigueur',
 	},
 	{
 		question: 'Je vous ______________ mon ancien patron, Robert Lebel.',
 		options: ['introduis', 'présentez', 'présente', 'introduisez'],
-		answer: 'présente',
+		correctAnswer: 'présente',
 	},
 	{
 		question: 'Son collègue lui _______________ communiqué la nouvelle?',
 		options: ['a-t-il', 'a t’il', 'a t-il', 'a-t il'],
-		answer: 'a-t-il',
+		correctAnswer: 'a-t-il',
 	},
 	{
 		question: 'Le directeur rencontrera la ministre _______________.',
@@ -1494,19 +1494,19 @@ export const quizQuestions = [
 			'prochain vendredi',
 			'vendredi prochain',
 		],
-		answer: 'vendredi prochain',
+		correctAnswer: 'vendredi prochain',
 	},
 	{
 		question:
 			'Tous les employés et employées doivent ______________ à la réunion.',
 		options: ['attendre', 'assister', 'entendre', 'écouter'],
-		answer: 'assister',
+		correctAnswer: 'assister',
 	},
 	{
 		question:
 			'Vous devriez obtenir votre laissez-passer ________________ deux semaines.',
 		options: ['d’ici', 'd’ici dans', 'avant dans', 'par'],
-		answer: 'd’ici',
+		correctAnswer: 'd’ici',
 	},
 	{
 		question:
@@ -1517,7 +1517,7 @@ export const quizQuestions = [
 			'il fait moins froid',
 			'elle fait moins froide',
 		],
-		answer: 'il fait moins froid',
+		correctAnswer: 'il fait moins froid',
 	},
 	{
 		question: 'Sont-ils tous satisfaits ________________?',
@@ -1527,13 +1527,13 @@ export const quizQuestions = [
 			'pour leur travail',
 			'sur leur travail',
 		],
-		answer: 'de leur travail',
+		correctAnswer: 'de leur travail',
 	},
 	{
 		question:
 			'En ce moment, nous ________________ les conséquences d’une telle décision.',
 		options: ['évaluions', 'évalueons', 'évalons', 'évaluons'],
-		answer: 'évaluons',
+		correctAnswer: 'évaluions',
 	},
 	{
 		question: 'Le directeur ___________________ de notre avis.',
@@ -1543,6 +1543,6 @@ export const quizQuestions = [
 			'a pas tenu compte',
 			"n'a tenu compte pas",
 		],
-		answer: "n'a pas tenu compte",
+		correctAnswer: "n'a pas tenu compte",
 	},
 ];
