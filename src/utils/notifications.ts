@@ -22,7 +22,7 @@ const showNotification = () => {
   
   // Create and show notification
   const notification = document.createElement('div');
-  notification.className = 'fixed bottom-4 right-4 bg-green-600 text-white px-6 py-4 rounded-lg shadow-lg transform transition-transform duration-500 ease-in-out';
+  notification.className = 'fixed bottom-4 right-4 bg-blue-600 text-white px-6 py-4 rounded-lg shadow-lg transform transition-transform duration-500 ease-in-out';
   notification.style.zIndex = '1000';
   notification.textContent = phrase;
   

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Home, LogOut } from 'lucide-react';
+import { Home, LogOut, Book } from 'lucide-react';
 import { getStreak } from '../utils/streak';
 
 const Navbar = () => {
@@ -22,6 +22,13 @@ const Navbar = () => {
           </Link>
           
           <div className="flex items-center space-x-4">
+            <Link
+              to="/bescherelle"
+              className="flex items-center space-x-2 text-blue-600 hover:text-blue-700"
+            >
+              <Book size={24} />
+              <span className="font-medium">Digital Bescherelle</span>
+            </Link>
             <div className="bg-green-100 text-green-600 px-4 py-2 rounded-full">
               <span className="font-semibold">🔥 {streak} Day Streak</span>
             </div>

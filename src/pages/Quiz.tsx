@@ -1,12 +1,15 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { Plus } from 'lucide-react';
 import { quizQuestions } from '../data/frenchData';
-import { showMotivationalNotification } from '../utils/notification';
+import { showMotivationalNotification } from '../utils/notifications';
+import AddToQuizListModal from '../components/AddToQuizListModal';
 
 const Quiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
+  const [showModal, setShowModal] = useState(false);
 
   const handleAnswerClick = (answer: string) => {
     setSelectedAnswer(answer);
@@ -60,7 +63,7 @@ const Quiz = () => {
         <h1 className="text-3xl font-bold text-gray-800 mb-8">French Quiz</h1>
         
         <div className="max-w-md mx-auto">
-          <div className="bg-white rounded-lg shadow-lg p-8">
+          <div className="relative bg-white rounded-lg shadow-lg p-8">
             <div className="mb-4">
               <span className="text-sm text-gray-600">
                 Question {currentQuestion + 1}/{quizQuestions.length}
@@ -71,6 +74,13 @@ const Quiz = () => {
               {quizQuestions[currentQuestion].question}
             </h2>
             
+            <button
+              onClick={() => setShowModal(true)}
+              className="absolute top-4 right-4 p-2 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
+            >
+              <Plus className="w-5 h-5 text-blue-600" />
+            </button>
+
             <div className="space-y-3">
               {quizQuestions[currentQuestion].options.map((option, index) => (
                 <button
@@ -96,6 +106,13 @@ const Quiz = () => {
           </div>
         </div>
       </div>
+
+      {showModal && (
+        <AddToQuizListModal
+          question={quizQuestions[currentQuestion]}
+          onClose={() => setShowModal(false)}
+        />
+      )}
     </div>
   );
 };
