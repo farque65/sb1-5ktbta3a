@@ -1545,4 +1545,44 @@ export const quizQuestions = [
 		],
 		correctAnswer: "n'a pas tenu compte",
 	},
+	{
+		question: 'Quel mot ou groupe de mots  complète le mieux le text? Plusieurs personnes auront la chance d’obtenir une chaise ergonomique ______________ les mois à venir.',
+		options: [
+			"par",
+			"sur",
+			'en',
+			"dans",
+		],
+		correctAnswer: "dans",
+	},
+	{
+		question: 'Quel mot ou groupe de mots  complète le mieux le text? Assure-toi de vérifier la date _________________ de chaque commande.',
+		options: [
+			"de livraison",
+			"délivraison",
+			'de délivraison',
+			"de livraisson",
+		],
+		correctAnswer: "de livraison",
+	},
+	{
+		question: 'Quel mot ou groupe de mots  complète le mieux le text? ________________ à votre question, sachez que je suis tout à fait d\'accord avec vous sur ce point.',
+		options: [
+			"En retour",
+			"En réponse",
+			'En répondant',
+			"En réplique",
+		],
+		correctAnswer: "En réponse",
+	},
+	{
+		question: 'Quel mot ou groupe de mots  complète le mieux le text? Il ________________ l\'affaire avec tact.',
+		options: [
+			"a agi",
+			"s'est occupé",
+			'a manipulé',
+			"a traité",
+		],
+		correctAnswer: "a traité",
+	},
 ];
