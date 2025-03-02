@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Plus, Trash2 } from 'lucide-react';
-import { QuizReviewList } from '../types';
-import { getQuizReviewLists, removeQuestionFromList } from '../utils/quizReviewLists';
-import { showMotivationalNotification } from '../utils/notifications';
+import { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import AddToQuizListModal from '../components/AddToQuizListModal';
+import { QuizReviewList } from '../types';
+import { showMotivationalNotification } from '../utils/notifications';
+import { getQuizReviewLists, removeQuestionFromList } from '../utils/quizReviewLists';
 
 const ReviewQuiz = () => {
   const { listId } = useParams<{ listId: string }>();
@@ -151,7 +151,13 @@ const ReviewQuiz = () => {
               </span>
             </div>
             
-            <h2 className="text-xl font-semibold mb-6">
+            {list.questions[currentQuestion]?.info && 
+              <h2 className="text-xl font-semibold mb-6">
+                {list.questions[currentQuestion].info}
+              </h2>
+            }
+
+            <h2 className="text-xl mb-6">
               {list.questions[currentQuestion].question}
             </h2>
 

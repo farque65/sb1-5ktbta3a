@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
 import { Plus } from 'lucide-react';
+import { useState } from 'react';
+import AddToQuizListModal from '../components/AddToQuizListModal';
 import { quizQuestions } from '../data/frenchData';
 import { showMotivationalNotification } from '../utils/notifications';
-import AddToQuizListModal from '../components/AddToQuizListModal';
 
 const Quiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -70,7 +70,13 @@ const Quiz = () => {
               </span>
             </div>
             
-            <h2 className="text-xl font-semibold mb-6">
+            {quizQuestions[currentQuestion]?.info && 
+              <h2 className="text-xl font-semibold mb-6">
+                {quizQuestions[currentQuestion].info}
+              </h2>
+            }
+
+            <h2 className="text-xl mb-6">
               {quizQuestions[currentQuestion].question}
             </h2>
             

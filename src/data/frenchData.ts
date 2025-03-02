@@ -1503,12 +1503,14 @@ export const quizQuestions = [
 		correctAnswer: 'assister',
 	},
 	{
+		info: 'Quel mot ou groupe de mots  complète le mieux le text? ',
 		question:
 			'Vous devriez obtenir votre laissez-passer ________________ deux semaines.',
 		options: ['d’ici', 'd’ici dans', 'avant dans', 'par'],
 		correctAnswer: 'd’ici',
 	},
 	{
+		info: 'Quel mot ou groupe de mots  complète le mieux le text? ',
 		question:
 			'Ici au premier étage, on gèle. Gisèle trouve qu’________________ au troisième.',
 		options: [
@@ -1520,6 +1522,7 @@ export const quizQuestions = [
 		correctAnswer: 'il fait moins froid',
 	},
 	{
+		info: 'Quel mot ou groupe de mots  complète le mieux le text? ',
 		question: 'Sont-ils tous satisfaits ________________?',
 		options: [
 			'de leur travail',
@@ -1530,12 +1533,14 @@ export const quizQuestions = [
 		correctAnswer: 'de leur travail',
 	},
 	{
+		info: 'Quel mot ou groupe de mots  complète le mieux le text? ',
 		question:
 			'En ce moment, nous ________________ les conséquences d’une telle décision.',
 		options: ['évaluions', 'évalueons', 'évalons', 'évaluons'],
 		correctAnswer: 'évaluions',
 	},
 	{
+		info: 'Quel mot ou groupe de mots  complète le mieux le text? ',
 		question: 'Le directeur ___________________ de notre avis.',
 		options: [
 			"n'a pas tenu compte",
@@ -1546,7 +1551,8 @@ export const quizQuestions = [
 		correctAnswer: "n'a pas tenu compte",
 	},
 	{
-		question: 'Quel mot ou groupe de mots  complète le mieux le text? Plusieurs personnes auront la chance d’obtenir une chaise ergonomique ______________ les mois à venir.',
+		info: 'Quel mot ou groupe de mots  complète le mieux le text? ',
+		question: 'Plusieurs personnes auront la chance d’obtenir une chaise ergonomique ______________ les mois à venir.',
 		options: [
 			"par",
 			"sur",
@@ -1556,7 +1562,8 @@ export const quizQuestions = [
 		correctAnswer: "dans",
 	},
 	{
-		question: 'Quel mot ou groupe de mots  complète le mieux le text? Assure-toi de vérifier la date _________________ de chaque commande.',
+		info: 'Quel mot ou groupe de mots  complète le mieux le text? ',
+		question: 'Assure-toi de vérifier la date _________________ de chaque commande.',
 		options: [
 			"de livraison",
 			"délivraison",
@@ -1566,7 +1573,8 @@ export const quizQuestions = [
 		correctAnswer: "de livraison",
 	},
 	{
-		question: 'Quel mot ou groupe de mots  complète le mieux le text? ________________ à votre question, sachez que je suis tout à fait d\'accord avec vous sur ce point.',
+		info: 'Quel mot ou groupe de mots  complète le mieux le text? ',
+		question: ' ________________ à votre question, sachez que je suis tout à fait d\'accord avec vous sur ce point.',
 		options: [
 			"En retour",
 			"En réponse",
@@ -1576,7 +1584,8 @@ export const quizQuestions = [
 		correctAnswer: "En réponse",
 	},
 	{
-		question: 'Quel mot ou groupe de mots  complète le mieux le text? Il ________________ l\'affaire avec tact.',
+		info: 'Quel mot ou groupe de mots  complète le mieux le text? ',
+		question: 'Il ________________ l\'affaire avec tact.',
 		options: [
 			"a agi",
 			"s'est occupé",
@@ -1584,5 +1593,38 @@ export const quizQuestions = [
 			"a traité",
 		],
 		correctAnswer: "a traité",
+	},
+	{
+		info: 'Quel mot ou groupe de mots complète le mieux le texte?',
+		question: 'Pour lui, il s\'agit d\'une ______________ à la vie privée.',
+		options: [
+			"a teinte",
+			"atteinte",
+			"ateinte",
+			"attainte"
+		],
+		correctAnswer: "atteinte",
+	},
+	{
+		info: 'Quel mot ou groupe de mots complète le mieux le texte?',
+		question: '________________ que je sache, nous ne sommes pas responsables de ce problème d’impression.',
+		options: [
+			"Pour",
+			"Pour autant",
+			"À ma connaissance",
+			"Aussi loin"
+		],
+		correctAnswer: "Pour autant",
+	},
+	{
+		info: 'Quel mot ou groupe de mots complète le mieux le texte?',
+		question: 'La première étape pour prévenir et __________________ la violence en milieu de travail est de comprendre les différents types d’événements qui peuvent être jugés violents. Ce n’est pas aussi facile qu’on pourrait le penser.',
+		options: [
+			"nier",
+			"rayer",
+			'étouffer',
+			"enrayer",
+		],
+		correctAnswer: "enrayer",
 	},
 ];
