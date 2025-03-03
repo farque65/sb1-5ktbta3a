@@ -1,4 +1,4 @@
-import { ReviewList, FlashCard } from '../types';
+import { FlashCard, ReviewList } from '../types';
 
 const STORAGE_KEY = 'frenchLearningReviewLists';
 
@@ -50,5 +50,11 @@ export const removeCardFromList = (listId: string, card: FlashCard) => {
     }
     return list;
   });
+  saveReviewLists(updatedLists);
+};
+
+export const deleteReviewList = (listId: string) => {
+  const lists = getReviewLists();
+  const updatedLists = lists.filter(list => list.id !== listId);
   saveReviewLists(updatedLists);
 };

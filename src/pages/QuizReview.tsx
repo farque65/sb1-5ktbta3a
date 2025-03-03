@@ -1,15 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { Clock, ListChecks } from 'lucide-react';
+import { Clock, ListChecks, Trash2 } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { QuizReviewList } from '../types';
-import { getQuizReviewLists } from '../utils/quizReviewLists';
+import { deleteQuizReviewList, getQuizReviewLists } from '../utils/quizReviewLists';
 
 const QuizReview = () => {
   const [lists, setLists] = useState<QuizReviewList[]>([]);
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setLists(getQuizReviewLists());
   }, []);
+
+  const handleDeleteList = (listId: string) => {
+    deleteQuizReviewList(listId);
+    setLists(getQuizReviewLists());
+    setShowDeleteConfirm(null);
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-500 to-blue-600 py-8">
@@ -33,22 +41,49 @@ const QuizReview = () => {
             </div>
           ) : (
             lists.map((list) => (
-              <Link
-                key={list.id}
-                to={`/quiz-review/${list.id}`}
-                className="bg-white rounded-lg p-6 hover:shadow-lg transition-shadow"
-              >
-                <div className="flex justify-between items-start">
-                  <div>
-                    <h2 className="text-xl font-semibold text-gray-800 mb-2">{list.name}</h2>
-                    <p className="text-gray-600">{list.questions.length} questions</p>
+              <div key={list.id} className="relative bg-white rounded-lg p-6 hover:shadow-lg transition-shadow">
+                {showDeleteConfirm === list.id ? (
+                  <div className="absolute inset-0 bg-white rounded-lg p-6 flex flex-col items-center justify-center">
+                    <p className="text-gray-800 mb-4">Are you sure you want to delete this list?</p>
+                    <div className="flex space-x-4">
+                      <button
+                        onClick={() => handleDeleteList(list.id)}
+                        className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700"
+                      >
+                        Yes, Delete
+                      </button>
+                      <button
+                        onClick={() => setShowDeleteConfirm(null)}
+                        className="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300"
+                      >
+                        Cancel
+                      </button>
+                    </div>
                   </div>
-                  <div className="flex items-center text-gray-500 text-sm">
-                    <Clock className="w-4 h-4 mr-1" />
-                    <span>{new Date(list.createdAt).toLocaleDateString()}</span>
-                  </div>
-                </div>
-              </Link>
+                ) : (
+                  <>
+                    <div className="flex justify-between items-start">
+                      <div className="cursor-pointer" onClick={() => navigate(`/quiz-review/${list.id}`)}>
+                        <h2 className="text-xl font-semibold text-gray-800 mb-2">{list.name}</h2>
+                        <p className="text-gray-600">{list.questions.length} questions</p>
+                      </div>
+                      <div className="flex items-center space-x-4">
+                        <div className="flex items-center text-gray-500 text-sm">
+                          <Clock className="w-4 h-4 mr-1" />
+                          <span>{new Date(list.createdAt).toLocaleDateString()}</span>
+                        </div>
+                        <button
+                          onClick={() => setShowDeleteConfirm(list.id)}
+                          className="text-red-500 hover:text-red-700"
+                          title="Delete list"
+                        >
+                          <Trash2 size={20} />
+                        </button>
+                      </div>
+                    </div>
+                  </>
+                )}
+              </div>
             ))
           )}
         </div>

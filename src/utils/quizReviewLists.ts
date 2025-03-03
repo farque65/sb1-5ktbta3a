@@ -1,4 +1,4 @@
-import { QuizReviewList, QuizQuestion } from '../types';
+import { QuizQuestion, QuizReviewList } from '../types';
 
 const STORAGE_KEY = 'frenchLearningQuizReviewLists';
 
@@ -50,5 +50,11 @@ export const removeQuestionFromList = (listId: string, question: QuizQuestion) =
     }
     return list;
   });
+  saveQuizReviewLists(updatedLists);
+};
+
+export const deleteQuizReviewList = (listId: string) => {
+  const lists = getQuizReviewLists();
+  const updatedLists = lists.filter(list => list.id !== listId);
   saveQuizReviewLists(updatedLists);
 };
