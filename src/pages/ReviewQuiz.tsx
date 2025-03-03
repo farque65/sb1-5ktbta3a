@@ -1,15 +1,16 @@
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Plus, Trash2 } from 'lucide-react';
-import { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
-import AddToQuizListModal from '../components/AddToQuizListModal';
 import { QuizReviewList } from '../types';
-import { showMotivationalNotification } from '../utils/notifications';
 import { getQuizReviewLists, removeQuestionFromList } from '../utils/quizReviewLists';
+import { showMotivationalNotification } from '../utils/notifications';
+import AddToQuizListModal from '../components/AddToQuizListModal';
 
 const ReviewQuiz = () => {
   const { listId } = useParams<{ listId: string }>();
   const navigate = useNavigate();
   const [list, setList] = useState<QuizReviewList | null>(null);
+  const [randomizedQuestions, setRandomizedQuestions] = useState<QuizReviewList | null>(null);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
@@ -21,23 +22,50 @@ const ReviewQuiz = () => {
     const currentList = lists.find(l => l.id === listId);
     if (currentList) {
       setList(currentList);
+      randomizeQuestions(currentList);
     } else {
       navigate('/quiz-review');
     }
   }, [listId, navigate]);
 
+  // Function to randomize questions and their options
+  const randomizeQuestions = (currentList: QuizReviewList) => {
+    // Create a deep copy of the list to avoid mutating the original data
+    const listCopy = JSON.parse(JSON.stringify(currentList));
+    
+    // Shuffle the questions array
+    const questions = [...listCopy.questions];
+    for (let i = questions.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [questions[i], questions[j]] = [questions[j], questions[i]];
+    }
+    
+    // Shuffle the options for each question
+    questions.forEach(question => {
+      const options = [...question.options];
+      for (let i = options.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [options[i], options[j]] = [options[j], options[i]];
+      }
+      question.options = options;
+    });
+    
+    listCopy.questions = questions;
+    setRandomizedQuestions(listCopy);
+  };
+
   const handleAnswerClick = (answer: string) => {
-    if (!list) return;
+    if (!randomizedQuestions) return;
     
     setSelectedAnswer(answer);
     
-    if (answer === list.questions[currentQuestion].correctAnswer) {
+    if (answer === randomizedQuestions.questions[currentQuestion].correctAnswer) {
       setScore(score + 1);
     }
 
     setTimeout(() => {
       setSelectedAnswer(null);
-      if (currentQuestion < list.questions.length - 1) {
+      if (currentQuestion < randomizedQuestions.questions.length - 1) {
         setCurrentQuestion(currentQuestion + 1);
         showMotivationalNotification('quiz');
       } else {
@@ -47,31 +75,40 @@ const ReviewQuiz = () => {
   };
 
   const handleRemoveQuestion = () => {
-    if (list && listId) {
-      removeQuestionFromList(listId, list.questions[currentQuestion]);
-      const updatedLists = getQuizReviewLists();
-      const updatedList = updatedLists.find(l => l.id === listId);
+    if (list && randomizedQuestions && listId) {
+      // Find the original question in the list that matches the current randomized question
+      const originalQuestion = list.questions.find(q => 
+        q.question === randomizedQuestions.questions[currentQuestion].question
+      );
       
-      if (!updatedList || updatedList.questions.length === 0) {
-        navigate('/quiz-review');
-        return;
-      }
+      if (originalQuestion) {
+        removeQuestionFromList(listId, originalQuestion);
+        const updatedLists = getQuizReviewLists();
+        const updatedList = updatedLists.find(l => l.id === listId);
+        
+        if (!updatedList || updatedList.questions.length === 0) {
+          navigate('/quiz-review');
+          return;
+        }
 
-      setList(updatedList);
-      if (currentQuestion >= updatedList.questions.length) {
-        setCurrentQuestion(updatedList.questions.length - 1);
+        setList(updatedList);
+        randomizeQuestions(updatedList);
+        setCurrentQuestion(0);
       }
     }
   };
 
   const restartQuiz = () => {
-    setCurrentQuestion(0);
-    setScore(0);
-    setShowScore(false);
-    setSelectedAnswer(null);
+    if (list) {
+      randomizeQuestions(list);
+      setCurrentQuestion(0);
+      setScore(0);
+      setShowScore(false);
+      setSelectedAnswer(null);
+    }
   };
 
-  if (!list || list.questions.length === 0) {
+  if (!list || !randomizedQuestions || list.questions.length === 0) {
     return (
       <div className="min-h-screen bg-gradient-to-b from-blue-500 to-blue-600 py-8">
         <div className="container mx-auto px-4">
@@ -106,7 +143,7 @@ const ReviewQuiz = () => {
           <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-8">
             <h2 className="text-2xl font-bold text-center mb-4">Quiz Complete!</h2>
             <p className="text-xl text-center mb-6">
-              You scored {score} out of {list.questions.length}
+              You scored {score} out of {randomizedQuestions.questions.length}
             </p>
             <div className="space-y-4">
               <button
@@ -139,7 +176,7 @@ const ReviewQuiz = () => {
             <ArrowLeft className="w-5 h-5" />
             <span>Back to Lists</span>
           </button>
-          <h1 className="text-3xl font-bold text-white text-center">{list.name}</h1>
+          <h1 className="text-3xl font-bold text-white text-center">{randomizedQuestions.name}</h1>
           <div className="w-24"></div>
         </div>
         
@@ -147,18 +184,18 @@ const ReviewQuiz = () => {
           <div className="relative bg-white rounded-lg shadow-lg p-8">
             <div className="mb-4">
               <span className="text-sm text-gray-600">
-                Question {currentQuestion + 1}/{list.questions.length}
+                Question {currentQuestion + 1}/{randomizedQuestions.questions.length}
               </span>
             </div>
             
-            {list.questions[currentQuestion]?.info && 
+            {randomizedQuestions[currentQuestion]?.info && 
               <h2 className="text-xl font-semibold mb-6">
-                {list.questions[currentQuestion].info}
+                {randomizedQuestions[currentQuestion].info}
               </h2>
             }
 
             <h2 className="text-xl mb-6">
-              {list.questions[currentQuestion].question}
+              {randomizedQuestions[currentQuestion].question}
             </h2>
 
             <div className="absolute top-4 right-4 flex space-x-2">
@@ -179,17 +216,19 @@ const ReviewQuiz = () => {
             </div>
             
             <div className="space-y-3">
-              {list.questions[currentQuestion].options.map((option, index) => (
+              {randomizedQuestions.questions[currentQuestion].options.map((option, index) => (
                 <button
                   key={index}
                   onClick={() => handleAnswerClick(option)}
                   disabled={selectedAnswer !== null}
                   className={`w-full p-4 text-left rounded-lg transition-colors ${
                     selectedAnswer === option
-                      ? option === list.questions[currentQuestion].correctAnswer
+                      ? option === randomizedQuestions.questions[currentQuestion].correctAnswer
                         ? 'bg-green-100 border-green-500'
                         : 'bg-red-100 border-red-500'
-                      : 'bg-gray-50 hover:bg-gray-100'
+                      : selectedAnswer !== null && option === randomizedQuestions.questions[currentQuestion].correctAnswer
+                        ? 'bg-green-100 border-green-500'
+                        : 'bg-gray-50 hover:bg-gray-100'
                   } border ${
                     selectedAnswer === option ? 'border-2' : 'border'
                   }`}
@@ -202,10 +241,10 @@ const ReviewQuiz = () => {
         </div>
       </div>
 
-      {showModal && (
+      {showModal && randomizedQuestions && (
         <AddToQuizListModal
-          question={list.questions[currentQuestion]}
-          currentListId={list.id}
+          question={randomizedQuestions.questions[currentQuestion]}
+          currentListId={randomizedQuestions.id}
           onClose={() => setShowModal(false)}
         />
       )}

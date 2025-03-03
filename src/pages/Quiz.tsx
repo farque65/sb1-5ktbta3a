@@ -1,8 +1,8 @@
+import React, { useState, useEffect } from 'react';
 import { Plus } from 'lucide-react';
-import { useState } from 'react';
-import AddToQuizListModal from '../components/AddToQuizListModal';
 import { quizQuestions } from '../data/frenchData';
 import { showMotivationalNotification } from '../utils/notifications';
+import AddToQuizListModal from '../components/AddToQuizListModal';
 
 const Quiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -10,17 +10,47 @@ const Quiz = () => {
   const [showScore, setShowScore] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [showModal, setShowModal] = useState(false);
+  const [randomizedQuestions, setRandomizedQuestions] = useState(quizQuestions);
+
+  // Randomize questions when component mounts
+  useEffect(() => {
+    randomizeQuestions();
+  }, []);
+
+  // Function to randomize questions and their options
+  const randomizeQuestions = () => {
+    // Create a deep copy of the questions to avoid mutating the original data
+    const questionsCopy = JSON.parse(JSON.stringify(quizQuestions));
+    
+    // Shuffle the questions array
+    for (let i = questionsCopy.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [questionsCopy[i], questionsCopy[j]] = [questionsCopy[j], questionsCopy[i]];
+    }
+    
+    // Shuffle the options for each question
+    questionsCopy.forEach(question => {
+      const options = [...question.options];
+      for (let i = options.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [options[i], options[j]] = [options[j], options[i]];
+      }
+      question.options = options;
+    });
+    
+    setRandomizedQuestions(questionsCopy);
+  };
 
   const handleAnswerClick = (answer: string) => {
     setSelectedAnswer(answer);
     
-    if (answer === quizQuestions[currentQuestion].correctAnswer) {
+    if (answer === randomizedQuestions[currentQuestion].correctAnswer) {
       setScore(score + 1);
     }
 
     setTimeout(() => {
       setSelectedAnswer(null);
-      if (currentQuestion < quizQuestions.length - 1) {
+      if (currentQuestion < randomizedQuestions.length - 1) {
         setCurrentQuestion(currentQuestion + 1);
         showMotivationalNotification('quiz');
       } else {
@@ -30,6 +60,7 @@ const Quiz = () => {
   };
 
   const restartQuiz = () => {
+    randomizeQuestions();
     setCurrentQuestion(0);
     setScore(0);
     setShowScore(false);
@@ -43,7 +74,7 @@ const Quiz = () => {
           <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-8">
             <h2 className="text-2xl font-bold text-center mb-4">Quiz Complete!</h2>
             <p className="text-xl text-center mb-6">
-              You scored {score} out of {quizQuestions.length}
+              You scored {score} out of {randomizedQuestions.length}
             </p>
             <button
               onClick={restartQuiz}
@@ -66,18 +97,18 @@ const Quiz = () => {
           <div className="relative bg-white rounded-lg shadow-lg p-8">
             <div className="mb-4">
               <span className="text-sm text-gray-600">
-                Question {currentQuestion + 1}/{quizQuestions.length}
+                Question {currentQuestion + 1}/{randomizedQuestions.length}
               </span>
             </div>
             
-            {quizQuestions[currentQuestion]?.info && 
+            {randomizedQuestions[currentQuestion]?.info && 
               <h2 className="text-xl font-semibold mb-6">
-                {quizQuestions[currentQuestion].info}
+                {randomizedQuestions[currentQuestion].info}
               </h2>
             }
 
             <h2 className="text-xl mb-6">
-              {quizQuestions[currentQuestion].question}
+              {randomizedQuestions[currentQuestion].question}
             </h2>
             
             <button
@@ -88,17 +119,17 @@ const Quiz = () => {
             </button>
 
             <div className="space-y-3">
-              {quizQuestions[currentQuestion].options.map((option, index) => (
+              {randomizedQuestions[currentQuestion].options.map((option, index) => (
                 <button
                   key={index}
                   onClick={() => handleAnswerClick(option)}
                   disabled={selectedAnswer !== null}
                   className={`w-full p-4 text-left rounded-lg transition-colors ${
                     selectedAnswer === option
-                      ? option === quizQuestions[currentQuestion].correctAnswer
+                      ? option === randomizedQuestions[currentQuestion].correctAnswer
                         ? 'bg-green-100 border-green-500'
                         : 'bg-red-100 border-red-500'
-                      : selectedAnswer != null && selectedAnswer != option && option === quizQuestions[currentQuestion].correctAnswer
+                      : selectedAnswer != null && selectedAnswer != option && option === randomizedQuestions[currentQuestion].correctAnswer
                         ? 'bg-green-100 border-green-500'
                         : 'bg-gray-50 hover:bg-gray-100'
                   } border ${
@@ -115,7 +146,7 @@ const Quiz = () => {
 
       {showModal && (
         <AddToQuizListModal
-          question={quizQuestions[currentQuestion]}
+          question={randomizedQuestions[currentQuestion]}
           onClose={() => setShowModal(false)}
         />
       )}
