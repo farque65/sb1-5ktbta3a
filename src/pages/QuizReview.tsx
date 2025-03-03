@@ -43,8 +43,8 @@ const QuizReview = () => {
             lists.map((list) => (
               <div key={list.id} className="relative bg-white rounded-lg p-6 hover:shadow-lg transition-shadow">
                 {showDeleteConfirm === list.id ? (
-                  <div className="absolute inset-0 bg-white rounded-lg p-6 flex flex-col items-center justify-center">
-                    <p className="text-gray-800 mb-4">Are you sure you want to delete this list?</p>
+                  <div className="absolute inset-0 bg-white rounded-lg p-6 flex flex-row items-center justify-center">
+                    <p className="text-gray-800 mx-4">Are you sure you want to delete this list?</p>
                     <div className="flex space-x-4">
                       <button
                         onClick={() => handleDeleteList(list.id)}
