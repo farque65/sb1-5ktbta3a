@@ -1715,4 +1715,26 @@ export const quizQuestions = [
 		],
 		correctAnswer: "auriez dû me le",
 	},
+	{
+		info: 'Quel mot ou groupe de mots complète le mieux le texte?',
+		question: '______________ toutes ces données soient accessibles, certaines ne sont pas régies par la Loi sur l’accès à l’information.',
+		options: [
+			"Bien que",
+			"Même si",
+			"Alors que",
+			"Autrement que",
+		],
+		correctAnswer: "Bien que",
+	},
+	{
+		info: 'Quel mot ou groupe de mots complète le mieux le texte?',
+		question: '______________ l’obligeance de faire suivre ce courriel à toute personne qui pourrait se retrouver dans la même situation.',
+		options: [
+			"Ayons",
+			"Aillez",
+			"Ayez",
+			"Ayant",
+		],
+		correctAnswer: "Ayez",
+	},
 ];
