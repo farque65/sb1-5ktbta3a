@@ -1,14 +1,14 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import Bescherelle from './pages/Bescherelle';
 import Dashboard from './pages/Dashboard';
 import Flashcards from './pages/Flashcards';
 import Quiz from './pages/Quiz';
-import ReviewLists from './pages/ReviewLists';
-import ReviewFlashcards from './pages/ReviewFlashcards';
 import QuizReview from './pages/QuizReview';
+import ReviewFlashcards from './pages/ReviewFlashcards';
+import ReviewLists from './pages/ReviewLists';
 import ReviewQuiz from './pages/ReviewQuiz';
-import Bescherelle from './pages/Bescherelle';
 
 function App() {
   return (
@@ -25,6 +25,7 @@ function App() {
           <Route path="/quiz-review/:listId" element={<ReviewQuiz />} />
           <Route path="/bescherelle" element={<Bescherelle />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
