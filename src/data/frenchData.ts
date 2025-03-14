@@ -1627,4 +1627,92 @@ export const quizQuestions = [
 		],
 		correctAnswer: "enrayer",
 	},
+	{
+		info: 'Quel mot ou groupe de mots complète le mieux le texte?',
+		question: 'Il s’agit d’un projet pilote ______________ les perspectives de carrière des jeunes fonctionnaires.',
+		options: [
+			"par but d'améliorer",
+			"viser d'améliorer",
+			'visant à améliorer',
+			"en améliorant",
+		],
+		correctAnswer: "visant à améliorer",
+	},
+	{
+		info: 'Quel mot ou groupe de mots complète le mieux le texte?',
+		question: 'Vous pouvez ______________ par téléphone au 604-987-7865.',
+		options: [
+			"s'inscrire",
+			"l'inscrire",
+			'vous inscrire',
+			"s'enregistrer",
+		],
+		correctAnswer: "vous inscrire",
+	},
+	{
+		info: 'Quel mot ou groupe de mots complète le mieux le texte?',
+		question: 'Hier, il y a eu ______________ qui a duré deux heures.',
+		options: [
+			"une panne de courant",
+			"une coupe de courant",
+			'une panne de pouvoir',
+			"une coupure de pouvoir",
+		],
+		correctAnswer: "une panne de courant",
+	},
+	{
+		info: 'Quel mot ou groupe de mots complète le mieux le texte?',
+		question: 'Je ______________ pour remercier tous ceux et celles qui ont participé bénévolement à l\'activité. Merci beaucoup!',
+		options: [
+			"prends l'occasion",
+			"profite de l'occasion",
+			'prends la chance',
+			"prends l'opportunité",
+		],
+		correctAnswer: "profite de l'occasion",
+	},
+	{
+		info: 'Quel mot ou groupe de mots complète le mieux le texte?',
+		question: 'Si vous ______________ ce comité, veuillez communiquer avec moi le plus rapidement possible.',
+		options: [
+			"vous assoyez à",
+			"faites part de",
+			'siégez sur',
+			"êtes membre de",
+		],
+		correctAnswer: "êtes membre de",
+	},
+	{
+		info: 'Quel mot ou groupe de mots complète le mieux le texte?',
+		question: 'Soyez en mesure de présenter une pièce d’identité ______________.',
+		options: [
+			"si requis",
+			"au besoin",
+			'se requise',
+			"à la demande",
+		],
+		correctAnswer: "au besoin",
+	},
+	{
+		info: 'Quel mot ou groupe de mots complète le mieux le texte?',
+		question: 'Veillez à ce que chaque employé ______________ son nouveau laissez-passer avant la fin de l’année financière.',
+		options: [
+			"reçoit",
+			"recoive",
+			"reçoive",
+			"recoit",
+		],
+		correctAnswer: "reçoive",
+	},
+	{
+		info: 'Quel mot ou groupe de mots complète le mieux le texte?',
+		question: 'Vous ______________ dire plus tôt.',
+		options: [
+			"auriez dû me le",
+			"m’auriez dû le",
+			'auriez dû le me',
+			"me l’auriez dû",
+		],
+		correctAnswer: "auriez dû me le",
+	},
 ];
