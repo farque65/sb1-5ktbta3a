@@ -1737,4 +1737,70 @@ export const quizQuestions = [
 		],
 		correctAnswer: "Ayez",
 	},
+	{
+		info: 'EXTRAIT DU SITE INTERNET DE L’AGENCE DU REVENU DU CANADA IMPÔTNET est un service rapide, facile à utiliser et sécuritaire. Il vous permet de transmettre directement, par Internet, votre déclaration de revenus. Pour utiliser ce service, vous devez préparer votre déclaration en utilisant un logiciel ou une application Web que nous avons homologués. TED est un système automatisé qui permet aux fournisseurs autorisés de nous transmettre votre déclaration de revenus des particuliers par voie électronique. Il vous suffit d’apporter vos documents à un spécialiste en déclarations, qui établira votre déclaration par ordinateur et nous la transmettra par voie électronique.',
+		question: 'Quel est le sens du mot "homologués" dans le texte?',
+		options: [
+			"rendus équivalent",
+			"reconnus officiellement",
+			"développés",
+			"identifiés",
+		],
+		correctAnswer: "reconnus officiellement",
+	},
+	{
+		info: 'EXTRAIT DU SITE INTERNET DE L’AGENCE DU REVENU DU CANADA IMPÔTNET est un service rapide, facile à utiliser et sécuritaire. Il vous permet de transmettre directement, par Internet, votre déclaration de revenus. Pour utiliser ce service, vous devez préparer votre déclaration en utilisant un logiciel ou une application Web que nous avons homologués. TED est un système automatisé qui permet aux fournisseurs autorisés de nous transmettre votre déclaration de revenus des particuliers par voie électronique. Il vous suffit d’apporter vos documents à un spécialiste en déclarations, qui établira votre déclaration par ordinateur et nous la transmettra par voie électronique.',
+		question: 'Comment la déclaration de revenus est-elle transmise avec TED ?',
+		options: [
+			"Par courrier recommandé",
+			"En remplissant un formulaire en ligne",
+			"Par voie électronique via un fournisseur autorisé",
+			"En appelant un agent de l’Agence du revenu du Canada",
+		],
+		correctAnswer: "Par voie électronique via un fournisseur autorisé",
+	},
+	{
+		info: 'EXTRAIT DU SITE INTERNET DE L’AGENCE DU REVENU DU CANADA IMPÔTNET est un service rapide, facile à utiliser et sécuritaire. Il vous permet de transmettre directement, par Internet, votre déclaration de revenus. Pour utiliser ce service, vous devez préparer votre déclaration en utilisant un logiciel ou une application Web que nous avons homologués. TED est un système automatisé qui permet aux fournisseurs autorisés de nous transmettre votre déclaration de revenus des particuliers par voie électronique. Il vous suffit d’apporter vos documents à un spécialiste en déclarations, qui établira votre déclaration par ordinateur et nous la transmettra par voie électronique.',
+		question: 'Quel est un point commun entre IMPÔTNET et TED ?',
+		options: [
+			"Les deux nécessitent un rendez-vous en personne",
+			"Les deux impliquent l’envoi postal des déclarations",
+			"Les deux permettent la transmission électronique des déclarations",
+			"Les deux sont accessibles uniquement aux entreprises",
+		],
+		correctAnswer: "Les deux permettent la transmission électronique des déclarations",
+	},
+	{
+		info: 'EXTRAIT DU SITE INTERNET DE L’AGENCE DU REVENU DU CANADA IMPÔTNET est un service rapide, facile à utiliser et sécuritaire. Il vous permet de transmettre directement, par Internet, votre déclaration de revenus. Pour utiliser ce service, vous devez préparer votre déclaration en utilisant un logiciel ou une application Web que nous avons homologués. TED est un système automatisé qui permet aux fournisseurs autorisés de nous transmettre votre déclaration de revenus des particuliers par voie électronique. Il vous suffit d’apporter vos documents à un spécialiste en déclarations, qui établira votre déclaration par ordinateur et nous la transmettra par voie électronique.',
+		question: 'Pourquoi doit-on utiliser un logiciel ou une application Web homologuée avec IMPÔTNET ?',
+		options: [
+			"Parce que l’Agence du revenu du Canada exige un format spécifique",
+			"Parce qu’un logiciel non homologué pourrait contenir des erreurs",
+			"Parce que cela garantit la sécurité et la conformité de la déclaration",
+			"Toutes les réponses ci-dessus",
+		],
+		correctAnswer: "Toutes les réponses ci-dessus",
+	},
+	{
+		info: 'N’hésitez pas à communiquer avec le personnel de la bibliothèque si vous avez besoin d’aide pour avoir accès à l’un ou l’autre de ses services. Vous devez communiquer avec nous au numéro de téléphone indiqué __________ (A).',
+		question: 'Choisissez le groupe de mots le plus approprié à insérer dans l’espace en blanc « A ».',
+		options: [
+			"par ailleurs",
+			"en italique",
+			"ci-joint",
+			"ci-dessous",
+		],
+		correctAnswer: "ci-dessous",
+	},
+	{
+		info: 'Le service d’aide est offert de 8 h __________ (B) 16 h.',
+		question: 'Choisissez le mot le plus approprié à insérer dans l’espace en blanc « B ».',
+		options: [
+			"pour",
+			"vers",
+			"à",
+			"dans",
+		],
+		correctAnswer: "à",
+	},
 ];
